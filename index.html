@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="title">
+        <h1>PENDIENTES</h1>
+        <p>Cosas que tengo que hacer:</p>
+    </div>
+
+    <div class="form">
+        <form action="javascript:void(0);" method="POST" onsubmit="app.agregar()">
+            <input type="text" id="agregar-hacer" placeholder="¿Qué tengo que hacer?">
+            <input type="submit" value="Agregar" class="btn btn-primary">
+        </form>
+
+            <p id="contador"></p>
+            <table>
+                <tr class="paraHacer">
+                    <th>
+                        <h3>Actividades:</h3>
+                    </th>
+                </tr>
+
+                <tbody id="tareas">
+
+                </tbody>
+            </table>
+    </div>
+
+    <div id="editar" role="aria-hidden">
+        <form action="javascript:void(0);" method="POST" id="guardar-edit" >
+            <input type="text" id="editar-hacer">
+            <input type="submit" value="Guardar" class="btn btn-success">
+            <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
